@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Daniel Araujo</title>
+    <style>
+        body {
+            color: #383D3E;
+            font-size: 16px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: white;
+            margin: 0px;
+        }
+
+        header {
+            background-image: url("background.jpg");
+            /*Change to http://i0.wp.com/i.pinimg.com/originals/1d/e6/37/1de637aa47409992ad8817f3a9622086.jpg?quality=80&strip=all (add image to github)*/
+            height: 200px;
+            width: 100%;
+            content: "";
+            display: table;
+            clear: both;
+            overflow: hidden;
+        }
+
+        #name {
+            font-size: 35px;
+            text-align: center;
+            width: 50%;
+            padding-left: 5%;
+            padding-right: 5%;
+            padding-top: 1%;
+            float: left;
+            overflow: inherit;
+        }
+
+        #vertical-line {
+            border-left: 2px solid #383D3E;
+            width: 39%;
+            height: 85%;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            float: left;
+            overflow: inherit;
+        }
+
+        #profile {
+            text-align: center;
+            padding: 1%;
+            word-wrap: break-word;
+            overflow: inherit;
+        }
+
+        #navbar {
+            background-color: #A5D3E0;
+            border-top: 1px solid #383D3E;
+            border-bottom: 1px solid #383D3E;
+            overflow: hidden;
+        }
+
+        #navbar a {
+            color: #383D3E;
+            font-size: 15px;
+            text-align: center;
+            text-decoration: none;
+            padding: 8px 10px;
+            float: left;
+        }
+
+        #navbar a:hover {
+            color: white;
+            background-color: #406E8E;
+        }
+
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        .sticky+#skills {
+            padding-top: 37px;
+        }
+
+        .section {
+            padding-left: 2%;
+        }
+
+        h2 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #406E8E;
+            border-bottom: 1px solid #406E8E;
+        }
+
+        .info {
+            text-align: center;
+            line-height: 1.5em;
+        }
+
+        em {
+            font-size: 14px;
+        }
+
+        #project-info {
+            font-size: 12px;
+            margin-top: -30px;
+            margin-left: 1%;
+            margin-right: 1%;
+        }
+
+        #project-list {
+            width: 94%;
+            margin-left: 3%;
+        }
+
+        .project {
+            width: 50%;
+            float: left;
+        }
+
+        img {
+            height: 16px;
+            margin: 2px;
+            margin-bottom: -2px;
+        }
+
+        a {
+            color: #0000EE;
+        }
+        
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div id="name">
+            <h1>DANIEL ARAUJO</h1>
+        </div>
+        <div id="vertical-line">
+            <div id="profile">
+                <p>daniel.amorim.araujo@gmail.com<br><br>226-988-5107<br><br><a
+                        href="https://github.com/DanielAmorimAraujo" target="_blank">https://github.com/DanielAmorimAraujo</a></p>
+            </div>
+        </div>
+    </header>
+
+    <div id="navbar">
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+    </div>
+
+    <div id="skills" class="section">
+        <h2>SKILLS</h2>
+        <p>
+            <ul>
+                <li>Proficient in <strong>Java</strong>, <strong>HTML</strong>, <strong>CSS</strong>, and <strong>Racket</strong></li>
+                <li>Familiar with <strong>Visual Studio Code</strong>, <strong>NetBeans</strong>, <strong>SketchUp</strong>
+                    and <strong>Latex</strong></li>
+                <li>Able to <strong>solve problems</strong>, <strong>think critically</strong>, and work both <strong>independently</strong>
+                    and in <strong>collaboration</strong></li>
+                <li>Can communicate in <strong>English</strong>, <strong>Portuguese</strong>, and <strong>Spanish</strong></li>
+            </ul>
+        </p>
+    </div>
+
+    <div id="experience" class="section">
+        <h2>EXPERIENCE</h2>
+        <p class="info"><b>BARISTA, NOVA ERA BAKERY</b><br>Oct 2016 - Sept 2018<br>Responsible for making a
+            comfortable environment for customers,<br>making drinks, preparing pastries, maintaining the bakery, and so
+            on.</p>
+    </div>
+
+
+    <div id="education" class="section">
+        <h2>EDUCATION</h2>
+        <p class="info">Candidate for <b>BACHELOR OF COMPUTER SCIENCE</b> (EXP. 2023)<br>University of Waterloo<br>Cumulative average of 92.80%<br>Relevant
+            courses: CS 135<br>Awards:<br><em>University of Waterloo President's Scholarship of Distinction (95%+
+                Admission Average)<br>Faculty of Mathematics Entrance Scholarship<br>Nortel Networks Undergraduate
+                Scholarship</em>
+            <!--<ul>
+                <li>University of Waterloo President's Scholarship of Distinction (95%+ Admission Average)</li>
+                <li>Faculty of Mathematics Entrance Scholarship</li>
+                <li>Nortel Networks Undergraduate Scholarship</li>
+            </ul>-->
+        </p>
+        <br>
+        <p class="info"><b>INTERNATIONAL BACCALAUREATE</b> (2018)<br>Cameron Heights Collegiate Institute<br>Relevant
+            courses: ICS4UE, ICS3UE<br>
+    </div>
+    <!--
+        Euclid  top 16%     68/100      2888/18401
+        Hypatia top 30%     25/40       1978/6517
+        Fermat  top 5%      120/150     836/17309
+        Cayley  top 6.16%   121/150     1250/20286
+        Pascal  top 17%     120/150     4373/25723
+    -->
+
+    <div id="projects" class="section">
+        <h2>PROJECTS</h2>
+        <p id="project-info">Clicking the download icon (<img src="download.png">) beside a project name downloads the
+            user intended application. Clicking the github icon (<img src="github.png">) beside a project name opens up
+            the project on GitHub, where the code and other resources are available. Note: more projects are available
+            on GitHub that are not listed here.</p>
+        <div id="project-list">
+            <p class="project">
+                <b>Connect Four</b>
+                <a href="https://github.com/DanielAmorimAraujo/Connect-Four/blob/master/Connect_Four.jar?raw=true"><img
+                        src="download.png"></a>
+                <a href="https://github.com/DanielAmorimAraujo/Connect-Four" target="_blank"><img src="github.png"></a>
+                <br>Created a Connect Four game using Java where two players can play against each other.<br></p>
+            <p class="project">
+                <b>Tic-Tac-Toe</b>
+                <a href="https://github.com/DanielAmorimAraujo/Tic-Tac-Toe/blob/master/TicTac/dist/TicTac.jar?raw=true"><img
+                        src="download.png"></a>
+                <a href="https://github.com/DanielAmorimAraujo/Tic-Tac-Toe" target="_blank"><img src="github.png"></a>
+                <br>Created a Tic-Tac-Toe game using Java where two players can play against each other. Single player
+                is
+                also available with a computer that never loses (on GitHub).</p>
+        </div>
+    </div>
+
+    <script>
+            window.onscroll = function () { myFunction() };
+    
+            var navbar = document.getElementById("navbar");
+            var sticky = navbar.offsetTop;
+    
+            function myFunction() {
+                if (window.pageYOffset >= sticky) {
+                    navbar.classList.add("sticky")
+                } else {
+                    navbar.classList.remove("sticky");
+                }
+            }
+        </script>
+
+</body>
+
+</html>
