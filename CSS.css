@@ -1,0 +1,171 @@
+body {
+    background-color: white;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+header {
+    height: 150px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url("Image Resources/elephantbackground (orange).png");
+}
+
+h1 {
+    font-size: 48px;
+    font-family: Montserrat, Raleway, Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 400;
+    letter-spacing: 5px;
+    color: #9ac2f4;
+    margin-bottom: 10px;
+}
+
+#last-name {
+    color: #f46036;
+}
+
+#profile-picture-container {
+    width: 45%;
+    height: inherit;
+    float: left;
+}
+
+#profile-picture {
+    height: inherit;
+    float: right;
+}
+
+#profile-info {
+    height: inherit;
+    width: 26%;
+    padding-top: 10px;
+    padding-left: 10px;
+    float: left;
+    opacity: 0.8;
+}
+
+
+/*#profile-info::before {
+    content: "";
+    display: block;
+    background: url("Image Resources/Circle Photo.png") no-repeat;
+    background-size: cover;
+    height: 150px;
+    width: 150px;
+}*/
+
+.contact-icon {
+    width: 20px;
+}
+
+.contact {
+    width: 23%;
+    display: inline-block;
+    text-align: center;
+}
+
+.contact-name {
+    font-size: 10px;
+    color: darkblue;
+    display: inline;
+    margin-left: 15px;
+    display: none;
+}
+
+#about-me-parent {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding-left: 15%;
+    padding-right: 15%;
+    text-align: center;
+}
+
+#about-me {
+    color: #414770;
+    font-family: Raleway, Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-size: 16px;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+hr {
+    border-top: 1px solid #364b71;
+    width: 30%;
+    color: #364b71;
+}
+
+.section {
+    margin-top: 100px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#projects {
+    margin-left: 100px;
+    margin-right: 100px;
+    width: auto;
+    margin-bottom: 200px;
+}
+
+.project-square {
+    border: 1px solid #273043;
+    height: auto;
+    width: 350px;
+    margin-left: 10px;
+    margin-right: 10px;
+    box-sizing: content-box;
+    background-color: #273043;
+    position: relative;
+}
+
+#dropper-picture {
+    width: inherit;
+    height: auto;
+}
+
+.project-square:hover {
+    filter: brightness(50%);
+}
+
+h2 {
+    font-size: 32px;
+    font-family: Montserrat, Raleway, Verdana, Geneva, Tahoma, sans-serif;
+    color: #364b71;
+}
+
+.project-title {
+    height: 50px;
+    margin-top: 0px;
+    text-align: center;
+    width: inherit;
+    font-family: Raleway, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color: #9ac2f4;
+}
+
+h3 {
+    width: inherit;
+    font-family: Raleway, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+h4 {
+    font-size: 10px;
+    text-decoration: none;
+    display: inline;
+}
+
+@media (max-width: 768px) {}
+
+@media (min-width: 768px) {}
