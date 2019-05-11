@@ -37,6 +37,8 @@ h1 {
 #profile-picture {
     height: inherit;
     float: right;
+    /*border: 1px solid #f46036;
+    border-radius: 500px;*/
 }
 
 #profile-info {
@@ -103,29 +105,26 @@ hr {
 .section {
     margin-top: 100px;
     margin-left: 5%;
-    margin-right: 5%;
 }
 
 #projects {
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 10%;
+    margin-right: 10%;
     width: auto;
     margin-bottom: 200px;
 }
 
 .project-square {
     border: 1px solid #273043;
-    height: auto;
-    width: 350px;
-    margin-left: 10px;
-    margin-right: 10px;
+    width: 30%;
+    margin: 10px;
     box-sizing: content-box;
     background-color: #273043;
-    position: relative;
+    float: left;
 }
 
-#dropper-picture {
-    width: inherit;
+.project-picture {
+    width: 100%;
     height: auto;
 }
 
@@ -143,7 +142,7 @@ h2 {
     height: 50px;
     margin-top: 0px;
     text-align: center;
-    width: inherit;
+    width: 100%;
     font-family: Raleway, Verdana, Geneva, Tahoma, sans-serif;
     font-size: 20px;
     color: #9ac2f4;
