@@ -10,7 +10,7 @@ div {
 
 header {
     height: 150px;
-    padding-bottom: 20px;
+    margin-bottom: max( 20px, auto);
     text-align: center;
 }
 
@@ -87,6 +87,7 @@ li {
 }
 
 #section {
+    margin-top: auto;
     width: 100%;
 }
 
