@@ -9,8 +9,8 @@ div {
 }
 
 header {
-    height: 150px;
-    margin-bottom: max( 20px, auto);
+    height: auto;
+    margin-bottom: 20px;
     text-align: center;
 }
 
