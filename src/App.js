@@ -10,6 +10,7 @@ import Tooltip from 'react-bootstrap/Tooltip';
 
 import ProfilePic from './profile-pic.png'
 
+import Projects from './Projects';
 
 const ProfileIcon = ({ name, className, link }) => {
   return (
@@ -23,7 +24,7 @@ const ProfileIcon = ({ name, className, link }) => {
             </Tooltip>
           }
         >
-          <a href={link} className={className} />
+          <a href={link} className={className} target="_blank" />
         </OverlayTrigger>
       </span>
     </Col>
@@ -36,7 +37,7 @@ const Profile = () => {
     <>
       <Row>
         <Col xs="4">
-          <Image src={ProfilePic} className="float-right" />
+          <Image src={ProfilePic} id="profile-pic" className="float-right" />
         </Col>
         <Col id="profile">
           <p>hi,<br />
@@ -44,9 +45,9 @@ const Profile = () => {
           </p>
           <Row id="icons">
             <ProfileIcon name="Resume" className="far fa-file" />
-            <ProfileIcon name="Github" className="fab fa-github" />
-            <ProfileIcon name="LinkedIn" className="fab fa-linkedin" />
-            <ProfileIcon name="Email" className="far fa-envelope" />
+            <ProfileIcon name="GitHub" className="fab fa-github" link="https://github.com/DanielAmorimAraujo" />
+            <ProfileIcon name="LinkedIn" className="fab fa-linkedin" link="https://linkedin.com/in/danielaraujoo" />
+            <ProfileIcon name="Email" className="far fa-envelope" link="mailto:daniel.amorim.araujo@gmail.com" />
           </Row>
         </Col>
       </Row>
@@ -57,7 +58,7 @@ const Profile = () => {
 const Intro = () => {
   return (
     <p id="intro">
-      Hi, I'm a student at the University of Waterloo studying in the Computer Science Co-op program. This is my personal website, where I'll have projects, awards, and other stuff about me. Check out the links above for my resume, LinkedIn profile, GitHub account, or to contact me via Email
+      I am a Computer Science student attending the University of Waterloo. This is my personal website, where I'll have projects and other stuff about me, so enjoy your time here. Make sure to check out my <a class="text-link">Resume</a> and <a class="text-link" href="https://linkedin.com/in/danielaraujoo" target="_blank">LinkedIn</a>, or feel free to contact me through <a class="text-link" href="mailto:daniel.amorim.araujo@gmail.com" target="_blank">email</a>.
     </p>
   )
 }
@@ -68,6 +69,7 @@ const App = () => {
       <main role="main">
         <Profile />
         <Intro />
+        <Projects />
       </main>
     </>
   );
