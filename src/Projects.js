@@ -13,7 +13,7 @@ import Button from 'react-bootstrap/Button';
 /* Project Images */
 import Dropper from './assets/dropper.png';
 
-function MyVerticallyCenteredModal(props) {
+const ProjectModal = ({ type, ...props }) => {
   return (
     <Modal
       {...props}
@@ -23,16 +23,42 @@ function MyVerticallyCenteredModal(props) {
     >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
-          Modal heading
+          {type}
+          <a
+            href={
+              type === 'Dropper' ? "https://github.com/DanielAmorimAraujo/Dropper-Game"
+                : type === 'Roameo' ? "https://github.com/DanielAmorimAraujo/Travelbook"
+                  : ""}
+            className="fas fa-external-link-alt project-icon" target="_blank" />
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <h4>Centered Modal</h4>
-        <p>
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-          consectetur ac, vestibulum at eros.
-        </p>
+        {type === 'Dropper' && (
+          <p>
+            Dropper is a single-player game where the objective is to keep the red square on the screen by navigating through gaps in moving floors. Coins randomly generated around the screen can be collected along the way to add to your score.<br /><br />
+            It was coded and designed in Java using Android Studio. The game constantly updates using a game thread while game objects are drawn using a canvas. The game is currently still under development as new features, bug fixes, and a redesign is being worked on.<br /><br />
+            Future developmenets:
+          <ul>
+              <li>
+                add power-ups
+            </li>
+              <li>
+                add a shop
+            </li>
+              <li>
+                redesign look
+            </li>
+            </ul>
+          </p>
+        )}
+        {type === 'Roameo' && (
+          <p>
+            Roameo (previously named Travelbook), is a travel website used to allow multiple users to plan a trip at once. Using the Google Maps api, users are able to select a destination and add it to their calendar. It also hosts a Facebook Messenger bot (beta) to help users pick destinations.<br /><br />
+            This projet was created during a hackathon using Javascript, HTML/CSS, and Firebase.<br /><br />
+            Check out the <a className="text-link" href="https://danielaraujo.dev/Travelbook/" target="_blank">site</a>.<br /><br />
+            Note: due to the Google Maps api key expiring and costing money, the site is currently disabled.
+          </p>
+        )}
       </Modal.Body>
       <Modal.Footer>
         <Button onClick={props.onHide}>Close</Button>
@@ -41,30 +67,40 @@ function MyVerticallyCenteredModal(props) {
   );
 }
 
-
-const Projects = () => {
+const Project = ({ type }) => {
   const [modalShow, setModalShow] = React.useState(false);
 
+  return (
+    <>
+      <Card onClick={() => setModalShow(true)}>
+        <div class="card-image-container">
+          <Card.Img variant="top" src={Dropper} />
+          <div class="caption">
+            <p>Learn more</p>
+          </div>
+        </div>
+        <Card.Footer>{type}</Card.Footer>
+      </Card>
+
+      <ProjectModal
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+        type={type}
+      />
+    </>
+  )
+}
+
+
+const Projects = () => {
   return (
     <>
       <h2>projects</h2>
 
       <CardColumns>
-        <Card onClick={() => setModalShow(true)}>
-          <div class="card-image-container">
-            <Card.Img variant="top" src={Dropper} />
-            <div class="caption">
-              <p>Learn more</p>
-            </div>
-          </div>
-          <Card.Footer>Dropper</Card.Footer>
-        </Card>
+        <Project type="Dropper" />
+        <Project type="Roameo" />
       </CardColumns>
-
-      <MyVerticallyCenteredModal
-        show={modalShow}
-        onHide={() => setModalShow(false)}
-      />
     </>
   )
 }

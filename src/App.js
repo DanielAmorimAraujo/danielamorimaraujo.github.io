@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
 
 import Row from 'react-bootstrap/Row';
@@ -35,15 +35,15 @@ const ProfileIcon = ({ name, className, link }) => {
 const Profile = () => {
   return (
     <>
-      <Row>
-        <Col xs="4">
-          <Image src={ProfilePic} id="profile-pic" className="float-right" />
+      <Row id="profile">
+        <Col xs="12" sm="4">
+          <Image src={ProfilePic} id="profile-pic" />
         </Col>
-        <Col id="profile">
+        <Col id="profile-info">
           <p>hi,<br />
             I'm <span id="name">daniel araujo</span>
           </p>
-          <Row id="icons">
+          <Row id="icons" noGutters>
             <ProfileIcon name="Resume" className="far fa-file" />
             <ProfileIcon name="GitHub" className="fab fa-github" link="https://github.com/DanielAmorimAraujo" />
             <ProfileIcon name="LinkedIn" className="fab fa-linkedin" link="https://linkedin.com/in/danielaraujoo" />
@@ -58,7 +58,7 @@ const Profile = () => {
 const Intro = () => {
   return (
     <p id="intro">
-      I am a Computer Science student attending the University of Waterloo. This is my personal website, where I'll have projects and other stuff about me, so enjoy your time here. Make sure to check out my <a class="text-link">Resume</a> and <a class="text-link" href="https://linkedin.com/in/danielaraujoo" target="_blank">LinkedIn</a>, or feel free to contact me through <a class="text-link" href="mailto:daniel.amorim.araujo@gmail.com" target="_blank">email</a>.
+      I am a second-year Computer Science student attending the University of Waterloo, who is passionate about all things coding and loves solving difficult problems. This is my personal website, where I'll have projects and other stuff about me, so enjoy your time here. For a more professional and in-depth evaluation, make sure to check out my <a class="text-link">Resume</a> and <a class="text-link" href="https://linkedin.com/in/danielaraujoo" target="_blank">LinkedIn</a>. Also, feel free to contact me via <a class="text-link" href="mailto:daniel.amorim.araujo@gmail.com" target="_blank">email</a>.
     </p>
   )
 }
