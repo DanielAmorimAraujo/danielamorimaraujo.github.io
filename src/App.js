@@ -75,7 +75,7 @@ const Intro = () => {
 const SiteBuilding = () => {
   return (
     <div id="site-building">
-      <p>🚧 Site still under construction. Stay tuned. 🚧</p>
+      <p><span role="img" aria-label="construction sign">🚧</span> Site still under construction. Stay tuned. <span role="img" aria-label="construction sign">🚧</span></p>
     </div>
   );
 }
