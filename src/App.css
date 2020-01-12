@@ -9,6 +9,7 @@ body {
   );
   box-sizing: border-box;
   font-family: Montserrat, Raleway, Verdana, Geneva, Tahoma, sans-serif;
+  max-width: 100%;
 }
 
 main {
@@ -23,7 +24,7 @@ main {
 }
 
 #profile-pic {
-  width: 150px;
+  height: 225px;
   border-radius: 30%;
   float: right;
 }
@@ -32,7 +33,6 @@ main {
   padding-top: 50px;
   line-height: 36px;
   font-size: 30px;
-  padding-top: auto;
 }
 
 #name {
@@ -40,11 +40,41 @@ main {
   font-weight: 600;
 }
 
+@media (max-width: 576px) {
+  #profile-info {
+    font-size: 24px;
+  }
+
+  #name {
+    font-size: 40px;
+  }
+}
+
 #icons {
   font-size: 11px;
   line-height: 24px;
   margin-right: 15px;
   margin-left: 15px;
+  max-width: 75%;
+}
+
+@media (max-width: 576px) {
+  #profile-pic {
+    float: none;
+    margin-left: calc((100% - 225px) / 2);
+  }
+
+  #profile-info {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  #icons {
+    width: 100%;
+    margin: auto;
+  }
 }
 
 .individual-icons {
@@ -121,3 +151,65 @@ a:hover {
   margin-left: 15px;
   font-size: 18px;
 }
+
+.text-note {
+  color: grey;
+}
+
+#roameo-demo-btn {
+  cursor: pointer;
+}
+
+#site-building {
+  margin-top: 100px;
+  text-align: center;
+}
+
+#elephant {
+  width: 42px;
+  position: absolute;
+  right: 93px;
+  top: 86px;
+
+  -webkit-animation:spin 25s infinite linear;
+  -moz-animation:spin 25s infinite linear;
+  animation:spin 25s infinite linear;
+}
+
+@media (max-width: 576px) {
+  #elephant {
+    right: calc((100% - 225px) / 2 + 91px);
+    top: -140px;
+  }
+}
+
+#elephant-wrapper {
+  -webkit-animation: myOrbit 25s linear infinite; /* Chrome, Safari 5 */
+  -moz-animation: myOrbit 25s linear infinite; /* Firefox 5-15 */
+  -o-animation: myOrbit 25s linear infinite; /* Opera 12+ */
+  animation: myOrbit 25s linear infinite; /* Chrome, Firefox 16+, IE 10+, Safari 5 */
+}
+
+@-webkit-keyframes myOrbit {
+  from { -webkit-transform: rotate(0deg) translateX(128px) rotate(0deg); }
+  to   { -webkit-transform: rotate(360deg) translateX(128px) rotate(-360deg); }
+}
+
+@-moz-keyframes myOrbit {
+  from { -moz-transform: rotate(0deg) translateX(128px) rotate(0deg); }
+  to   { -moz-transform: rotate(360deg) translateX(128px) rotate(-360deg); }
+}
+
+@-o-keyframes myOrbit {
+  from { -o-transform: rotate(0deg) translateX(128px) rotate(0deg); }
+  to   { -o-transform: rotate(360deg) translateX(128px) rotate(-360deg); }
+}
+
+@keyframes myOrbit {
+  from { transform: rotate(0deg) translateX(128px) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(128px) rotate(-360deg); }
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
