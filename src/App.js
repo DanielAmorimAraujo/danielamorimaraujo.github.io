@@ -75,7 +75,7 @@ const Intro = () => {
 const SiteBuilding = () => {
   return (
     <div id="site-building">
-      <p>Site still under construction. Stay tuned.</p>
+      <p>🚧 Site still under construction. Stay tuned. 🚧</p>
     </div>
   );
 }
