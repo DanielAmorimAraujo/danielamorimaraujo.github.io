@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5000146b3fa4fcab677b44075dbdb6f5",
+    "revision": "4889b15195b80e6940d7912c350403bf",
     "url": "/DanielAmorimAraujo.github.io/index.html"
   },
   {
-    "revision": "1e6e482d9463245768b2",
+    "revision": "59a7d6918125e5806acb",
     "url": "/DanielAmorimAraujo.github.io/static/css/2.17e5ed98.chunk.css"
   },
   {
-    "revision": "e912144a843e3c8f2493",
-    "url": "/DanielAmorimAraujo.github.io/static/css/main.f70b66aa.chunk.css"
+    "revision": "fd71ba00e7b6696a718b",
+    "url": "/DanielAmorimAraujo.github.io/static/css/main.d620d671.chunk.css"
   },
   {
-    "revision": "1e6e482d9463245768b2",
-    "url": "/DanielAmorimAraujo.github.io/static/js/2.4def1f2f.chunk.js"
+    "revision": "59a7d6918125e5806acb",
+    "url": "/DanielAmorimAraujo.github.io/static/js/2.38cd7eec.chunk.js"
   },
   {
     "revision": "801eb6b718cfeb49e4699ab80a85e8cf",
-    "url": "/DanielAmorimAraujo.github.io/static/js/2.4def1f2f.chunk.js.LICENSE"
+    "url": "/DanielAmorimAraujo.github.io/static/js/2.38cd7eec.chunk.js.LICENSE"
   },
   {
-    "revision": "e912144a843e3c8f2493",
-    "url": "/DanielAmorimAraujo.github.io/static/js/main.a798e235.chunk.js"
+    "revision": "fd71ba00e7b6696a718b",
+    "url": "/DanielAmorimAraujo.github.io/static/js/main.b719b4b8.chunk.js"
   },
   {
     "revision": "805a612e05f16405e797",
