@@ -14,6 +14,34 @@ import ProfilePicture from './assets/profile-picture-faded.png';
 
 import ElephantWalking from './assets/elephant.gif';
 
+const appendElephant = (i, height, main) => {
+  const elephant = document.createElement('img');
+
+  elephant.classList.add('elephant');
+  if (i % 2 === 0) {
+    elephant.classList.add('elephant-right');
+  } else {
+    elephant.classList.add('elephant-left');
+  }
+  elephant.src = ElephantWalking;
+  const top = Math.floor((Math.random() * height));
+
+  elephant.style.top = String(top) + "px";
+  main.append(elephant)
+  setTimeout(() => { main.removeChild(elephant) }, 15000);
+}
+
+const generateElephants = () => {
+  const elephantCount = 15;
+  const
+    height = document.body.clientHeight,
+    main = document.getElementById('main');
+
+  for (let i = 0; i < elephantCount; ++i) {
+    setTimeout(() => { appendElephant(i, height, main) }, 1000 * i);
+  }
+}
+
 const ProfileIcon = ({ name, className, link }) => {
   return (
     <Col>
@@ -41,7 +69,7 @@ const Profile = () => {
         <Col xs="12" sm="5">
           <Image src={ProfilePicture} id="profile-pic" />
           <div id="elephant-wrapper">
-            <Image id="elephant" src={ElephantWalking}/>
+            <Image id="elephant" src={ElephantWalking} onClick={generateElephants} />
           </div>
         </Col>
         <Col xs="auto" sm="7" id="profile-info">
@@ -75,21 +103,25 @@ const Intro = () => {
 const SiteBuilding = () => {
   return (
     <div id="site-building">
-      <p><span role="img" aria-label="construction sign">🚧</span> Site still under construction. Stay tuned. <span role="img" aria-label="construction sign">🚧</span></p>
+      <p>
+        <span role="img" aria-label="construction sign">🚧</span>
+        Site still under construction
+        <span role="img" aria-label="construction sign">🚧</span>
+        <br />
+        <span style={{ color: 'grey' }}>(ps. click on the elephant)</span>
+      </p>
     </div>
   );
 }
 
 const App = () => {
   return (
-    <>
-      <main role="main">
-        <Profile />
-        <Intro />
-        <Projects />
-        <SiteBuilding />
-      </main>
-    </>
+    <main role="main" id="main">
+      <Profile />
+      <Intro />
+      <Projects />
+      <SiteBuilding />
+    </main>
   );
 }
 

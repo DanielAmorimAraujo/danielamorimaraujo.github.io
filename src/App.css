@@ -10,6 +10,7 @@ body {
   box-sizing: border-box;
   font-family: Montserrat, Raleway, Verdana, Geneva, Tahoma, sans-serif;
   max-width: 100%;
+  overflow-x: hidden;
 }
 
 main {
@@ -213,3 +214,31 @@ a:hover {
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+.elephant {
+  width: 42px;
+  position: absolute;
+}
+
+.elephant-right {
+  left: -50px;
+
+  transform: rotate(-90deg);
+  animation: elephant-right-move 15s linear;
+}
+
+.elephant-left {
+  right: -50px;
+
+  transform: rotate(-90deg) scaleY(-1);
+  animation: elephant-left-move 15s linear;
+}
+
+@keyframes elephant-right-move {
+  from { left: -50px; }
+  to { left: 100%; }
+}
+@keyframes elephant-left-move {
+  from { right: -50px; }
+  to { right: 100%; }
+}
