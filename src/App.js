@@ -32,7 +32,7 @@ const appendElephant = (i, height, main) => {
 }
 
 const generateElephants = () => {
-  const elephantCount = 15;
+  const elephantCount = 21;
   const
     height = document.body.clientHeight,
     main = document.getElementById('main');
@@ -108,7 +108,7 @@ const SiteBuilding = () => {
         Site still under construction
         <span role="img" aria-label="construction sign">🚧</span>
         <br />
-        <span style={{ color: 'grey' }}>(ps. click on the elephant)</span>
+        <span style={{ color: 'grey' }}>(p.s. click on the elephant)</span>
       </p>
     </div>
   );

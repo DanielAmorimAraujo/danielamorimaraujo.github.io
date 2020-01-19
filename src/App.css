@@ -171,6 +171,7 @@ a:hover {
   position: absolute;
   right: 93px;
   top: 86px;
+  cursor: pointer;
 
   -webkit-animation:spin 25s infinite linear;
   -moz-animation:spin 25s infinite linear;
