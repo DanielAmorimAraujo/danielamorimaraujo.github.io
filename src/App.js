@@ -34,7 +34,7 @@ const appendElephant = (i, height, main) => {
 const generateElephants = () => {
   const elephantCount = 21;
   const
-    height = document.body.clientHeight,
+    height = document.body.clientHeight - 50,
     main = document.getElementById('main');
 
   for (let i = 0; i < elephantCount; ++i) {
