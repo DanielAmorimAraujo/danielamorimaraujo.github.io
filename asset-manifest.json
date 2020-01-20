@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/DanielAmorimAraujo.github.io/static/css/main.d620d671.chunk.css",
-    "main.js": "/DanielAmorimAraujo.github.io/static/js/main.b719b4b8.chunk.js",
-    "main.js.map": "/DanielAmorimAraujo.github.io/static/js/main.b719b4b8.chunk.js.map",
+    "main.css": "/DanielAmorimAraujo.github.io/static/css/main.d2be20b6.chunk.css",
+    "main.js": "/DanielAmorimAraujo.github.io/static/js/main.b81566f6.chunk.js",
+    "main.js.map": "/DanielAmorimAraujo.github.io/static/js/main.b81566f6.chunk.js.map",
     "runtime-main.js": "/DanielAmorimAraujo.github.io/static/js/runtime-main.d5fc1410.js",
     "runtime-main.js.map": "/DanielAmorimAraujo.github.io/static/js/runtime-main.d5fc1410.js.map",
     "static/css/2.17e5ed98.chunk.css": "/DanielAmorimAraujo.github.io/static/css/2.17e5ed98.chunk.css",
-    "static/js/2.38cd7eec.chunk.js": "/DanielAmorimAraujo.github.io/static/js/2.38cd7eec.chunk.js",
-    "static/js/2.38cd7eec.chunk.js.map": "/DanielAmorimAraujo.github.io/static/js/2.38cd7eec.chunk.js.map",
+    "static/js/2.320d60fb.chunk.js": "/DanielAmorimAraujo.github.io/static/js/2.320d60fb.chunk.js",
+    "static/js/2.320d60fb.chunk.js.map": "/DanielAmorimAraujo.github.io/static/js/2.320d60fb.chunk.js.map",
     "index.html": "/DanielAmorimAraujo.github.io/index.html",
-    "precache-manifest.c98f3632a931f36147d556f9c11ac6c4.js": "/DanielAmorimAraujo.github.io/precache-manifest.c98f3632a931f36147d556f9c11ac6c4.js",
+    "precache-manifest.1b0882365121b100aac23b6317cbe2bb.js": "/DanielAmorimAraujo.github.io/precache-manifest.1b0882365121b100aac23b6317cbe2bb.js",
     "service-worker.js": "/DanielAmorimAraujo.github.io/service-worker.js",
     "static/css/2.17e5ed98.chunk.css.map": "/DanielAmorimAraujo.github.io/static/css/2.17e5ed98.chunk.css.map",
-    "static/css/main.d620d671.chunk.css.map": "/DanielAmorimAraujo.github.io/static/css/main.d620d671.chunk.css.map",
-    "static/js/2.38cd7eec.chunk.js.LICENSE": "/DanielAmorimAraujo.github.io/static/js/2.38cd7eec.chunk.js.LICENSE",
+    "static/css/main.d2be20b6.chunk.css.map": "/DanielAmorimAraujo.github.io/static/css/main.d2be20b6.chunk.css.map",
+    "static/js/2.320d60fb.chunk.js.LICENSE": "/DanielAmorimAraujo.github.io/static/js/2.320d60fb.chunk.js.LICENSE",
     "static/media/dropper.png": "/DanielAmorimAraujo.github.io/static/media/dropper.ecb14789.png",
     "static/media/elephant.gif": "/DanielAmorimAraujo.github.io/static/media/elephant.fc110275.gif",
     "static/media/profile-picture-faded.png": "/DanielAmorimAraujo.github.io/static/media/profile-picture-faded.1f2f8a78.png",
@@ -22,8 +22,8 @@
   "entrypoints": [
     "static/js/runtime-main.d5fc1410.js",
     "static/css/2.17e5ed98.chunk.css",
-    "static/js/2.38cd7eec.chunk.js",
-    "static/css/main.d620d671.chunk.css",
-    "static/js/main.b719b4b8.chunk.js"
+    "static/js/2.320d60fb.chunk.js",
+    "static/css/main.d2be20b6.chunk.css",
+    "static/js/main.b81566f6.chunk.js"
   ]
 }
