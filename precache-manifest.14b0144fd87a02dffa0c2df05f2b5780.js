@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "52b3f92cb9ce16e19da8bc6a3e6b8a8e",
+    "revision": "b6374c14403bae95df5a024383dfe2a9",
     "url": "/DanielAmorimAraujo.github.io/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/DanielAmorimAraujo.github.io/static/css/2.17e5ed98.chunk.css"
   },
   {
-    "revision": "717da18a71dfeba4d342",
+    "revision": "5fef7ec56cdbf2293666",
     "url": "/DanielAmorimAraujo.github.io/static/css/main.d2be20b6.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/DanielAmorimAraujo.github.io/static/js/2.320d60fb.chunk.js.LICENSE"
   },
   {
-    "revision": "717da18a71dfeba4d342",
-    "url": "/DanielAmorimAraujo.github.io/static/js/main.b81566f6.chunk.js"
+    "revision": "5fef7ec56cdbf2293666",
+    "url": "/DanielAmorimAraujo.github.io/static/js/main.ea2d6812.chunk.js"
   },
   {
     "revision": "805a612e05f16405e797",
