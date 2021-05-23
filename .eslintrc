@@ -18,7 +18,9 @@
     }
   },
   "rules": {
-    "prettier/prettier": "error",
+    "prettier/prettier": ["warn", {
+      "endOfLine":"auto"
+    }],
     "indent": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
     "react/jsx-uses-react": 1,

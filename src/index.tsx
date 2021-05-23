@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import "react-pdf/dist/esm/Page/AnnotationLayer.css";
+require("typeface-montserrat");
 
 ReactDOM.render(
   <React.StrictMode>
