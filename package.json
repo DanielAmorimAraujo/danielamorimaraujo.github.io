@@ -1,5 +1,4 @@
 {
-  "homepage": "https://danielamorimaraujo.github.io/",
   "name": "site",
   "version": "0.1.0",
   "private": true,
@@ -32,7 +31,7 @@
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b live -d build"
+    "deploy": "copy CNAME build\\CNAME && gh-pages -b live -d build"
   },
   "eslintConfig": {
     "extends": [
