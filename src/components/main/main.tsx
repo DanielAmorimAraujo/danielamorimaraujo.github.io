@@ -148,6 +148,43 @@ const Main = (): React.ReactElement => {
           />
         )}
       </Fade>
+      <Fade
+        in={is("about")}
+        style={{
+          position: "fixed",
+          top: "8px",
+          left: "8px",
+        }}
+      >
+        <div>
+          <span style={{ verticalAlign: "middle" }}>
+            <img
+              src={ProfilePicture}
+              height="24px"
+              alt="profile"
+              onClick={() => {
+                view("profile");
+              }}
+              style={{ cursor: "pointer" }}
+            />
+          </span>
+          <span
+            style={{ marginLeft: "8px", fontWeight: 600, cursor: "pointer" }}
+            onClick={() => {
+              view("profile");
+            }}
+          >
+            daniel araujo
+          </span>
+          <span style={{ verticalAlign: "middle" }}>
+            <Socials
+              onResumeClick={() => {
+                view("resume");
+              }}
+            />
+          </span>
+        </div>
+      </Fade>
     </>
   );
 };
