@@ -24,6 +24,7 @@ const Main = (): React.ReactElement => {
     curr: "profile",
     prev: "profile",
   });
+  const [touch, setTouch] = useState<{ x: number; y: number }>();
 
   const viewProfile = () => {
     setView({ curr: "profile", prev: view.curr });
@@ -35,6 +36,38 @@ const Main = (): React.ReactElement => {
 
   const viewResume = () => {
     setView({ curr: "resume", prev: view.curr });
+  };
+
+  window.ontouchstart = (e: TouchEvent) => {
+    setTouch(
+      e.touches.length === 1
+        ? { x: e.touches[0].clientX, y: e.touches[0].clientY }
+        : undefined
+    );
+  };
+
+  window.ontouchend = (e: TouchEvent) => {
+    if (!touch || e.changedTouches.length > 1) return;
+
+    const dX = e.changedTouches[0].clientX - touch.x;
+    const dY = e.changedTouches[0].clientY - touch.y;
+
+    if (Math.abs(dX) < 50 && Math.abs(dY) < 50) return;
+
+    const vertical = Math.abs(dX) < Math.abs(dY);
+
+    if (view.curr === "profile") {
+      if (vertical && dY < 0) {
+        viewAbout();
+      } else if (!vertical && dX < 0) {
+        viewResume();
+      }
+    } else if (
+      (view.curr === "about" && vertical && dY > 0) ||
+      (view.curr === "resume" && !vertical && dX > 0)
+    ) {
+      viewProfile();
+    }
   };
 
   window.onwheel = (e: WheelEvent) => {
@@ -67,7 +100,7 @@ const Main = (): React.ReactElement => {
         timeout={500}
       >
         <SubWrap item>
-          <Profile onResumeClick={viewResume} />
+          <Profile />
         </SubWrap>
       </Slide>
       <Slide direction="up" in={view.curr === "about"} timeout={500}>
