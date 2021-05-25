@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Grid from "@material-ui/core/Grid";
 import Slide from "@material-ui/core/Slide";
 import Fade from "@material-ui/core/Fade";
@@ -31,6 +31,19 @@ const Main = (): React.ReactElement => {
   });
   const [touch, setTouch] = useState<{ x: number; y: number }>();
   const [backHover, setBackHover] = useState(false);
+  const setResize = useState(false)[1];
+
+  const resizeCallback = useCallback((): void => {
+    setResize((previous) => !previous);
+  }, [setResize]);
+
+  useEffect(() => {
+    window.addEventListener("resize", resizeCallback);
+
+    return (): void => {
+      window.removeEventListener("resize", resizeCallback);
+    };
+  });
 
   const is = (name: TView) => viewInfo.curr === name;
   const was = (name: TView) => viewInfo.prev === name;
