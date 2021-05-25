@@ -3,7 +3,10 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
+import { pdfjs } from "react-pdf";
 require("typeface-montserrat");
+
+pdfjs.GlobalWorkerOptions.workerSrc = "pdf.worker.min.js";
 
 ReactDOM.render(
   <React.StrictMode>
