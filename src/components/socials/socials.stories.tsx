@@ -5,7 +5,8 @@ const Story = {
   title: "Socials",
 };
 
-const Socials = (): React.ReactElement => <CSocials />;
+// eslint-disable-next-line @typescript-eslint/no-empty-function
+const Socials = (): React.ReactElement => <CSocials onResumeClick={() => {}} />;
 
 export default Story;
 export { Socials };

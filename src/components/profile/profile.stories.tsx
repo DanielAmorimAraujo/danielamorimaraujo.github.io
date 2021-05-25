@@ -2,10 +2,11 @@ import React from "react";
 import CProfile from "./profile";
 
 const Story = {
-  title: "Profile"
-}
+  title: "Profile",
+};
 
-const Profile = (): React.ReactElement => <CProfile />;
+// eslint-disable-next-line @typescript-eslint/no-empty-function
+const Profile = (): React.ReactElement => <CProfile onResumeClick={() => {}} />;
 
 export default Story;
 export { Profile };

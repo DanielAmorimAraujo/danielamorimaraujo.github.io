@@ -8,6 +8,10 @@ import Elephant from "components/elephant/elephant";
 import Socials from "components/socials/socials";
 import ProfilePicture from "assets/profile-picture.png";
 
+interface IProfile {
+  onResumeClick: () => void;
+}
+
 const ProfilePictureWrap = styled(Grid)`
   position: relative;
 `;
@@ -33,7 +37,7 @@ const DescriptionWrap = styled.div`
   margin-top: 48px;
 `;
 
-const Profile = (): React.ReactElement => (
+const Profile = ({ onResumeClick }: IProfile): React.ReactElement => (
   <div>
     <Grid container justify="center" alignItems="center" spacing={4}>
       <ProfilePictureWrap item>
@@ -44,7 +48,7 @@ const Profile = (): React.ReactElement => (
         <Subtitle>
           hi,
           <SocialsWrap>
-            <Socials />
+            <Socials onResumeClick={onResumeClick} />
           </SocialsWrap>
           <br />
           I'm <Title theme={useTheme()}>daniel araujo</Title>

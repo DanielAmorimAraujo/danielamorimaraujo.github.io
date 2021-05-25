@@ -8,6 +8,10 @@ import styled from "styled-components";
 import { globalColors } from "library/styles";
 import { LINKS } from "library/config";
 
+interface ISocials {
+  onResumeClick: () => void;
+}
+
 const Icon = styled.span`
   cursor: pointer;
   margin: 0 4px;
@@ -16,10 +20,10 @@ const Icon = styled.span`
   }
 `;
 
-const Socials = (): React.ReactElement => (
+const Socials = ({ onResumeClick }: ISocials): React.ReactElement => (
   <>
     <Icon color={globalColors.blue}>
-      <FileOutlineIcon />
+      <FileOutlineIcon onClick={onResumeClick} />
     </Icon>
     <Icon color={globalColors.green}>
       <GithubIcon

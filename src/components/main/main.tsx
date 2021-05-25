@@ -1,11 +1,16 @@
 import React, { useState } from "react";
 import Grid from "@material-ui/core/Grid";
 import Slide from "@material-ui/core/Slide";
+import Fade from "@material-ui/core/Fade";
 import styled from "styled-components";
+import ArrowLeftCircleOutlineIcon from "mdi-react/ArrowLeftCircleOutlineIcon";
+import ArrowLeftCircleIcon from "mdi-react/ArrowLeftCircleIcon";
 
 import Profile from "components/profile/profile";
 import Resume from "components/resume/resume";
 import AboutMe from "components/about-me/about-me";
+import Socials from "components/socials/socials";
+import ProfilePicture from "assets/profile-picture.png";
 
 type TView = "profile" | "about" | "resume";
 
@@ -20,22 +25,17 @@ const SubWrap = styled(Grid)`
 `;
 
 const Main = (): React.ReactElement => {
-  const [view, setView] = useState<{ curr: TView; prev: TView }>({
+  const [viewInfo, setViewInfo] = useState<{ curr: TView; prev: TView }>({
     curr: "profile",
     prev: "profile",
   });
   const [touch, setTouch] = useState<{ x: number; y: number }>();
+  const [backHover, setBackHover] = useState(false);
 
-  const viewProfile = () => {
-    setView({ curr: "profile", prev: view.curr });
-  };
-
-  const viewAbout = () => {
-    setView({ curr: "about", prev: view.curr });
-  };
-
-  const viewResume = () => {
-    setView({ curr: "resume", prev: view.curr });
+  const is = (name: TView) => viewInfo.curr === name;
+  const was = (name: TView) => viewInfo.prev === name;
+  const view = (name: TView) => {
+    setViewInfo({ curr: name, prev: viewInfo.curr });
   };
 
   window.ontouchstart = (e: TouchEvent) => {
@@ -56,64 +56,99 @@ const Main = (): React.ReactElement => {
 
     const vertical = Math.abs(dX) < Math.abs(dY);
 
-    if (view.curr === "profile") {
+    if (is("profile")) {
       if (vertical && dY < 0) {
-        viewAbout();
+        view("about");
       } else if (!vertical && dX < 0) {
-        viewResume();
+        view("resume");
       }
     } else if (
-      (view.curr === "about" && vertical && dY > 0) ||
-      (view.curr === "resume" && !vertical && dX > 0)
+      (is("about") && vertical && dY > 0) ||
+      (is("resume") && !vertical && dX > 0)
     ) {
-      viewProfile();
+      view("profile");
     }
   };
 
   window.onwheel = (e: WheelEvent) => {
-    if (view.curr === "profile") {
+    if (is("profile")) {
       if (e.deltaY > 0) {
-        viewAbout();
+        view("about");
       } else if (e.deltaX > 0) {
-        viewResume();
+        view("resume");
       }
     } else if (
-      (view.curr === "about" && e.deltaY < 0) ||
-      (view.curr === "resume" && e.deltaX < 0)
+      (is("about") && e.deltaY < 0) ||
+      (is("resume") && e.deltaX < 0)
     ) {
-      viewProfile();
+      view("profile");
     }
   };
 
   return (
-    <MainWrap
-      container
-      justify="center"
-      alignItems="center"
-      style={{ height: window.innerHeight + "px" }}
-    >
-      <Slide
-        direction={
-          view.curr === "resume" || view.prev === "resume" ? "right" : "down"
-        }
-        in={view.curr === "profile"}
-        timeout={500}
+    <>
+      <MainWrap
+        container
+        justify="center"
+        alignItems="center"
+        style={{ height: window.innerHeight + "px" }}
       >
-        <SubWrap item>
-          <Profile />
-        </SubWrap>
-      </Slide>
-      <Slide direction="up" in={view.curr === "about"} timeout={500}>
-        <SubWrap item>
-          <AboutMe />
-        </SubWrap>
-      </Slide>
-      <Slide direction="left" in={view.curr === "resume"} timeout={500}>
-        <Grid item>
-          <Resume />
-        </Grid>
-      </Slide>
-    </MainWrap>
+        <Slide
+          direction={is("resume") || was("resume") ? "right" : "down"}
+          in={is("profile")}
+          timeout={500}
+        >
+          <SubWrap item>
+            <Profile
+              onResumeClick={() => {
+                view("resume");
+              }}
+            />
+          </SubWrap>
+        </Slide>
+        <Slide direction="up" in={is("about")} timeout={500}>
+          <SubWrap item>
+            <AboutMe />
+          </SubWrap>
+        </Slide>
+        <Slide direction="left" in={is("resume")} timeout={500}>
+          <Grid item>
+            <Resume />
+          </Grid>
+        </Slide>
+      </MainWrap>
+      <Fade
+        in={is("resume")}
+        style={{
+          position: "fixed",
+          top: "8px",
+          left: "8px",
+          cursor: "pointer",
+        }}
+      >
+        {backHover ? (
+          <ArrowLeftCircleIcon
+            onClick={() => {
+              view(viewInfo.prev);
+              setBackHover(false);
+            }}
+            onMouseLeave={() => {
+              setBackHover(false);
+            }}
+          />
+        ) : (
+          <ArrowLeftCircleOutlineIcon
+            onClick={() => {
+              view(viewInfo.prev);
+              setBackHover(false);
+            }}
+            onMouseEnter={() => {
+              setBackHover(true);
+            }}
+          />
+        )}
+      </Fade>
+    </>
   );
 };
 
