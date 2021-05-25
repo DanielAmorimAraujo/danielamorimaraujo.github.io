@@ -12,7 +12,7 @@ const Particles = (): React.ReactElement => (
           value: globalColors.text,
         },
         number: {
-          value: 320,
+          value: window.innerWidth * 0.1,
         },
         size: {
           value: 2,
