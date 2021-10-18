@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/static/js/main.43af4864.chunk.js",
-    "main.js.map": "/static/js/main.43af4864.chunk.js.map",
+    "main.js": "/static/js/main.2929c362.chunk.js",
+    "main.js.map": "/static/js/main.2929c362.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.5d106fb4.js",
     "runtime-main.js.map": "/static/js/runtime-main.5d106fb4.js.map",
     "static/css/2.64039b06.chunk.css": "/static/css/2.64039b06.chunk.css",
@@ -20,13 +20,13 @@
     "static/media/imagine.bb9a2758.png": "/static/media/imagine.bb9a2758.png",
     "static/media/index.css": "/static/media/montserrat-latin-900italic.efcaa0f6.woff",
     "static/media/profile-picture.00a1e13b.png": "/static/media/profile-picture.00a1e13b.png",
-    "static/media/resume.8e97b9d6.pdf": "/static/media/resume.8e97b9d6.pdf",
+    "static/media/resume.700153fd.pdf": "/static/media/resume.700153fd.pdf",
     "static/media/waterloo.8961a82e.png": "/static/media/waterloo.8961a82e.png"
   },
   "entrypoints": [
     "static/js/runtime-main.5d106fb4.js",
     "static/css/2.64039b06.chunk.css",
     "static/js/2.73c2b607.chunk.js",
-    "static/js/main.43af4864.chunk.js"
+    "static/js/main.2929c362.chunk.js"
   ]
 }
