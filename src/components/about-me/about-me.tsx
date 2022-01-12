@@ -9,7 +9,8 @@ import Waterloo from "assets/waterloo.png";
 import Condos from "assets/condos.png";
 import Enlighted from "assets/enlighted.png";
 import Imagine from "assets/imagine.png";
-import { LINKS } from "library/config";
+import Persona from "assets/persona.png";
+import { LINKS, WORK_LINKS } from "library/config";
 
 const Centered = styled.div`
   text-align: center;
@@ -18,6 +19,30 @@ const Centered = styled.div`
 const Gap = styled.div`
   height: 64px;
 `;
+
+interface IWorkGrid {
+  src: string;
+  alt: string;
+  link: string;
+  width?: number;
+  style: React.CSSProperties;
+}
+
+const WorkGrid = ({ src, alt, link, width = 112, style = {} }: IWorkGrid) => {
+  return (
+    <Grid item xs={12} sm={3} style={style}>
+      <img
+        src={src}
+        alt={alt}
+        width={width}
+        onClick={() => {
+          window.open(link);
+        }}
+        style={{ cursor: "pointer" }}
+      />
+    </Grid>
+  );
+};
 
 const AboutMe = (): React.ReactElement => {
   const xs = useMediaQuery(useTheme().breakpoints.down("xs"));
@@ -45,24 +70,45 @@ const AboutMe = (): React.ReactElement => {
         <Grid item>
           <div style={{ marginTop: xs ? "initial" : "-32px" }}>
             <Frame variant="secondary" angle={-4}>
-              <Grid container justify="space-evenly">
-                <Grid item xs={4} sm={4}>
-                  <img src={Condos} alt="Condos.ca" width={xs ? 96 : 128} />
-                </Grid>
-                <Grid item xs={4} sm={4} style={{ marginTop: "32px" }}>
-                  <img
-                    src={Enlighted}
-                    alt="Enlighted Inc."
-                    width={xs ? 96 : 128}
-                  />
-                </Grid>
-                <Grid item xs={4} sm={4}>
-                  <img
-                    src={Imagine}
-                    alt="Imagine Communications"
-                    width={xs ? 96 : 128}
-                  />
-                </Grid>
+              <Grid
+                container
+                justify="space-evenly"
+                spacing={2}
+                style={xs ? { maxWidth: "384px" } : {}}
+              >
+                <WorkGrid
+                  src={Persona}
+                  alt="Persona Identities"
+                  link={WORK_LINKS.persona}
+                  style={xs ? { marginTop: "8px", marginLeft: "-32px" } : {}}
+                />
+                <WorkGrid
+                  src={Condos}
+                  alt="Condos.ca"
+                  link={WORK_LINKS.condos}
+                  style={
+                    xs
+                      ? { marginLeft: "-192px" }
+                      : { marginTop: "32px", marginLeft: "-32px" }
+                  }
+                />
+                <WorkGrid
+                  src={Enlighted}
+                  alt="Enlighted Inc."
+                  link={WORK_LINKS.enlighted}
+                  style={
+                    xs
+                      ? { marginTop: "-32px", marginLeft: "128px" }
+                      : { marginTop: "8px", marginLeft: "-16px" }
+                  }
+                />
+                <WorkGrid
+                  src={Imagine}
+                  alt="Imagine Communications"
+                  link={WORK_LINKS.imagine}
+                  width={96}
+                  style={xs ? { marginLeft: "32px" } : { marginTop: "24px" }}
+                />
               </Grid>
             </Frame>
           </div>
@@ -71,7 +117,7 @@ const AboutMe = (): React.ReactElement => {
       <div style={{ marginTop: "48px" }}>
         doing mostly full-stack web development . However, I’m always looking
         for new opportunities and a chance to learn new skills, so feel free to
-        reach out at {LINKS.email}.
+        reach to {LINKS.email}.
       </div>
     </Centered>
   );

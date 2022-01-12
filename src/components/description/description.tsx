@@ -21,6 +21,8 @@ const Description = (): React.ReactElement => (
       <br />
       <br />
       scroll for more
+      <br />
+      (ps click the elephant)
     </ScrollText>
   </CenteredText>
 );
