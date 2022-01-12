@@ -1,32 +1,33 @@
 {
   "files": {
-    "main.js": "/static/js/main.2929c362.chunk.js",
-    "main.js.map": "/static/js/main.2929c362.chunk.js.map",
+    "main.js": "/static/js/main.e6ceb42e.chunk.js",
+    "main.js.map": "/static/js/main.e6ceb42e.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.5d106fb4.js",
     "runtime-main.js.map": "/static/js/runtime-main.5d106fb4.js.map",
     "static/css/2.64039b06.chunk.css": "/static/css/2.64039b06.chunk.css",
-    "static/js/2.73c2b607.chunk.js": "/static/js/2.73c2b607.chunk.js",
-    "static/js/2.73c2b607.chunk.js.map": "/static/js/2.73c2b607.chunk.js.map",
+    "static/js/2.6af64dcd.chunk.js": "/static/js/2.6af64dcd.chunk.js",
+    "static/js/2.6af64dcd.chunk.js.map": "/static/js/2.6af64dcd.chunk.js.map",
     "static/js/3.a575fe80.chunk.js": "/static/js/3.a575fe80.chunk.js",
     "static/js/3.a575fe80.chunk.js.map": "/static/js/3.a575fe80.chunk.js.map",
-    "1690868d0cee58feb34fdb0b657710f3.js": "/1690868d0cee58feb34fdb0b657710f3.js",
-    "1690868d0cee58feb34fdb0b657710f3.js.LICENSE.txt": "/1690868d0cee58feb34fdb0b657710f3.js.LICENSE.txt",
+    "5d4854c5e7b93de59c4cedeae6ee5e33.js": "/5d4854c5e7b93de59c4cedeae6ee5e33.js",
+    "5d4854c5e7b93de59c4cedeae6ee5e33.js.LICENSE.txt": "/5d4854c5e7b93de59c4cedeae6ee5e33.js.LICENSE.txt",
     "index.html": "/index.html",
     "static/css/2.64039b06.chunk.css.map": "/static/css/2.64039b06.chunk.css.map",
-    "static/js/2.73c2b607.chunk.js.LICENSE.txt": "/static/js/2.73c2b607.chunk.js.LICENSE.txt",
+    "static/js/2.6af64dcd.chunk.js.LICENSE.txt": "/static/js/2.6af64dcd.chunk.js.LICENSE.txt",
     "static/media/elephant-90.aae80ca4.gif": "/static/media/elephant-90.aae80ca4.gif",
     "static/media/elephant.67b752d7.gif": "/static/media/elephant.67b752d7.gif",
     "static/media/enlighted.0adc427a.png": "/static/media/enlighted.0adc427a.png",
     "static/media/imagine.bb9a2758.png": "/static/media/imagine.bb9a2758.png",
     "static/media/index.css": "/static/media/montserrat-latin-900italic.efcaa0f6.woff",
+    "static/media/persona.23224dc2.png": "/static/media/persona.23224dc2.png",
     "static/media/profile-picture.00a1e13b.png": "/static/media/profile-picture.00a1e13b.png",
-    "static/media/resume.700153fd.pdf": "/static/media/resume.700153fd.pdf",
+    "static/media/resume.5d6eec23.pdf": "/static/media/resume.5d6eec23.pdf",
     "static/media/waterloo.8961a82e.png": "/static/media/waterloo.8961a82e.png"
   },
   "entrypoints": [
     "static/js/runtime-main.5d106fb4.js",
     "static/css/2.64039b06.chunk.css",
-    "static/js/2.73c2b607.chunk.js",
-    "static/js/main.2929c362.chunk.js"
+    "static/js/2.6af64dcd.chunk.js",
+    "static/js/main.e6ceb42e.chunk.js"
   ]
 }
